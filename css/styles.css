@@ -1,0 +1,299 @@
+/* FUENTES */
+@font-face{
+  font-family:"nevis";
+  src: url(fonts/nevis.eot);
+  src:url(fonts/nevis.eot?#ietfix) format ("embbeded-opentype");
+  src:url(fonts/nevis.woff) format("wolf"),
+      url(fonts/nevis.ttf)format("truetype"),
+      url(fonts/nevis.svg)format("svg"); 
+  font-style: normal;   
+  font-weight: normal;   
+}      
+/*---------------------------- ESTILOS GENERALES -------------------------------------*/
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+/* ../ lo uso para bajar un nivel xq estamos en el folder css */
+  background-image: url( ../img/paven.png) ;
+}
+
+/* FORMULARIOS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+  border: 1px solid #c9c9c9;
+  box-shadow: 0 0 2px #ccc inset;
+  padding: 3px 1px 3px 1px;
+  color: grey;
+  transform: all 300ms;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+selec:focus{
+  border: 2px solid  #70b231;
+  color:black;
+ /*  OUTLINE ME SACA EL MARCADO NEGRO QUE LE PONE CHROME POR DEFECTO CUANDO SE HACE FOCO */
+  outline:0px;
+}
+/* Estilos a Botones */
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button{
+  display: block;
+  border-radius: 2px;
+  border: 1px solid green;  
+  width: 60px;
+  padding: 3px;
+  background-color: #70b321;
+  cursor: pointer ;
+  color: white;
+}
+/* HOVER DE BOTONES */
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover{
+  box-shadow: 0px 0px 2px grey;
+}
+/* ACTIVE BOTTON */
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active{
+  box-shadow: 0px 0px 3px grey inset;
+  outline:0px;
+  text-shadow: 0 0 2px #ccc;
+}
+/* Estilos a los Enlaces */
+a{
+  color: #529125;
+  text-decoration: none;
+}
+/* enlaces cuando hacemos hver */
+a:hover{
+  color: #285616;
+  text-decoration: none;
+}
+/* enlaces visitado */
+a:visited{
+  color: #529125;
+  text-decoration: none;
+}
+
+/* ---------------------------------HEADER ----------------------------------------------*/
+#header{
+  min-width: 1024px;
+  width: 100%;
+  height: 250px;
+  margin: 0px auto;
+  
+}
+#header a {
+  text-decoration: none;
+}
+/* SELECCIONO EL DIV QUE CONTIENE LA IMG */
+#header #logotipo{
+  width: 770px;
+  margin: 0px auto;
+  padding-top: 20px ;
+}
+/* SELECCION LA IMAGEN QUE TENGO DENTRO DEL DIV  */
+#header #logotipo img{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 140px;
+}
+#header h1 {
+  text-align:center;
+  font-size: 40px;
+  
+}
+#header h1 a{
+  color: #70b231;
+  font-family:"nevis";
+  /* LE DOY MAS SEPARACION A LAS LETRAS */
+  letter-spacing: 4px;
+  margin-top: 10px;
+  text-shadow:0px 2px 1px #333333 ;
+  transition:all 300ms ;
+}
+
+#header h1  :hover{
+  text-shadow:0px 2px 1px #333333,0px 0px 4px #70b231 ;
+}
+/* -------------------------NAV BAR--------------------------------------------------- */
+#nav{
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  height: 40px;
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  box-shadow: 0px 0px 2px grey;
+}
+
+#nav ul{
+  list-style: none;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 1090px;
+}
+
+#nav > ul > li{
+  line-height: 40px;
+  float: left;
+  border-right: 1px solid grey;
+  transition: all 300ms;
+
+}
+
+#nav >ul>li a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+#nav > ul > li:first-child{
+  border-left: 1px solid grey;
+}
+
+/* EL HOVER VA SOBRE EL LI XQ SI LO HACEMOS SOBRE ELA SOLO CAMBIARIA LA LETRA Y NO EL BLOQUE */
+#nav >ul > li:hover{
+  background-color:#70b231;
+  box-shadow: 0px 0px 4px green inset;
+}
+
+/* ----------------MENU DESPLEGABLE------------------------- */
+
+#nav >ul >li >ul {
+  display: none;/*  oculto el menu */
+  position: absolute; /* hace cuando salga de dibuje x encima y despagine todo */
+  z-index: 1; /* y lo unico por encima de todos los elementos */
+  width: 160px;
+  box-shadow: 0px 2px 2px grey;
+  
+}
+
+#nav> ul> li:hover >ul{
+  display: block;
+}/* 
+DOY COLOR Y FORMA AL CONTENEDOR DEL LI */
+#nav> ul > li:hover >ul >li{
+  background-color: #f2f1f0;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 8px;
+ }
+/* DOY COLOR A LA FUENTE  */
+#nav> ul > li:hover >ul >li >a{
+  color: #666;
+  text-align: left;
+  line-height: 26px;
+  font-size: 13px;
+}
+/* LE DOY SOMBRA AL LI PARA QUE SE ILUMINE CUANDO PASAMOS ELRATON */
+#nav> ul > li:hover >ul >li:hover{
+  box-shadow: 0px 0px 8px #ccc inset; /* O TB PUEDO USAR DIRECTO EL BACKGROUNDCOLOR */
+}
+
+/* --------------CONTENIDO ------------------------------- */
+#content{
+  width: 1200px;
+  min-height: 1100px;
+  margin: 0px auto;
+}
+.blue{
+  color: #2478f2 !important;
+}
+.red{
+  color:#9b2422!important;
+}
+#aside .widget{
+  display: block;
+  width: 180px;
+  margin: 5px auto;
+  padding: 8px;
+  padding: 0 10px;
+  font-size: 14px;
+  border-bottom: 1px dashed #333333;
+}
+
+#aside .widget:last-child{
+  margin-bottom: 20px;
+}
+
+#aside h3{
+  display: block;
+  color: #333333;
+  width: 100%;
+  text-align: center;
+  padding: 2px  0 ; 
+  margin-bottom: 15px;
+  background-color: #f2f3f2;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+}
+#aside li{
+  margin-top: 5px;
+  margin-bottom:10px;
+  margin-left: 20px;
+  list-style: square;
+}
+/* FORMULARIO BARRA LATERAL */
+#aside div label,
+#aside div input[type="text"],
+#aside div input[type="email"],
+#aside div input[type="password"]{
+  display: block;
+  width: 95%;
+  margin: 2px 0px;
+}
+
+#aside div input[type="button"],
+#aside div input[type="submit"],
+#aside div button{
+/*   margin: 5px 0px 10px 0px; */
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#aside input,
+#aside label{
+  margin: 0px auto;
+  text-align: center;
+}
+
+#aside, #frase{
+  width: 200px;
+  float: left;
+  margin: 30px; 
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px #ccc;
+  font-family: sans-serif, Arial, Helvetica;
+  clear: both;
+  
+}
+#frase{
+  padding: 10px;
+  font-size: 14px;
+  font-family: sans-serif;
+  width: 180px;
+}
+
+/* -------------------SECCIONES---------------------------------- */
+
+#sections{
+  float: left;
+  width: 75%;
+  font-family: sans-serif;
+  margin-right: 10px;
+  border:  1px solid  #9b2422;
+}
